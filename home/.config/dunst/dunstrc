@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x60+20+46"
+    geometry = "300x60+10+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 10
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -275,25 +275,25 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    foreground = "#89ddff"
-    background = "#121212"
-    frame_color = "#181A20"
+    background = "#<#{BACKGROUND}#>"
+    foreground = "#<#{PRIMARY}#>"
+    frame_color = "#<#{BACKGROUND}#>"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/images/heart.png
 
 [urgency_normal]
-    background = "#121212"
-    foreground = "#89ddff"
-    frame_color = "#181A20"
+    background = "#<#{BACKGROUND}#>"
+    foreground = "#<#{PRIMARY}#>"
+    frame_color = "#<#{BACKGROUND}#>"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/images/heart.png
 
 [urgency_critical]
-    background = "#121212"
-    foreground = "#EC7875"
-    frame_color = "#181A20"
+    background = "#<#{BACKGROUND}#>"
+    foreground = "#<#{ALERT}#>"
+    frame_color = "#<#{BACKGROUND}#>"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     icon = ~/.config/dunst/images/heart.png
